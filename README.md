@@ -4,7 +4,7 @@ A simple todos application use react and mobx.
 ## Preview
 ![preview](https://github.com/kwzm/mobx-todos/blob/master/static/preview.png)
 
-## dependencies
+## Dependencies
 * react16
 * mobx5
 * webpack4
