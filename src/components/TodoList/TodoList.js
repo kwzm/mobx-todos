@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { hot } from 'react-hot-loader'
 import TodoHeader from '../TodoHeader'
 import TodoView from '../TodoView'
 import TodoFooter from '../TodoFooter'
@@ -6,7 +7,6 @@ import styles from './TodoList.css'
 
 class TodoList extends Component {  
   render() {
-
     return (
       <div className={styles.todoList}>
         <TodoHeader />
@@ -17,4 +17,4 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList
+export default hot(module)(TodoList)
