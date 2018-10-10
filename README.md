@@ -1,5 +1,5 @@
 # Mobx-todos
-A simple todos application use mobx,react.
+A simple todos application use react and mobx.
 
 ## Preview
 ![preview](https://github.com/kwzm/mobx-todos/blob/master/static/preview.png)
