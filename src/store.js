@@ -19,6 +19,8 @@ class Todo {
 class Store {
   @observable todos = [];
 
+  @observable filter = 'All'
+
   @action.bound createTodo(title) {
     this.todos.unshift(new Todo(title))
   }
@@ -27,8 +29,24 @@ class Store {
     this.todos.remove(todo)
   }
 
+  @action.bound filterTodos(filter) {
+    this.filter = filter
+  }
+
   @computed get left() {
     return this.todos.filter(todo => !todo.finished).length
+  }
+
+  @computed get filteredTodos() {
+    switch(this.filter) {
+      case 'Active':
+        return observable(this.todos.filter(todo => !todo.finished))
+      case 'Completed':
+        return observable(this.todos.filter(todo => todo.finished))
+      case 'All':
+      default:
+        return this.todos
+    }
   }
 }
 

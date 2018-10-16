@@ -5,7 +5,7 @@ import TodoItem from '../TodoItem'
 import styles from './TodoView.css'
 
 @inject(stores => ({
-  todos: stores.store.todos,
+  todos: stores.store.filteredTodos,
   removeTodo: stores.store.removeTodo,
 }))
 @observer 
