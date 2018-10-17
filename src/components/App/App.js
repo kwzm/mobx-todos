@@ -3,12 +3,12 @@ import { hot } from 'react-hot-loader'
 import TodoHeader from '../TodoHeader'
 import TodoView from '../TodoView'
 import TodoFooter from '../TodoFooter'
-import styles from './TodoList.css'
+import styles from './App.css'
 
-class TodoList extends Component {  
+class App extends Component {  
   render() {
     return (
-      <div className={styles.todoList}>
+      <div className={styles.app}>
         <TodoHeader />
         <TodoView />
         <TodoFooter />
@@ -17,4 +17,4 @@ class TodoList extends Component {
   }
 }
 
-export default hot(module)(TodoList)
+export default hot(module)(App)
